@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46C057B01A8810FF003725B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C057AF1A8810FF003725B4 /* AppDelegate.swift */; };
+		46C057B21A8810FF003725B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C057B11A8810FF003725B4 /* Images.xcassets */; };
+		46C057B51A8810FF003725B4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C057B31A8810FF003725B4 /* MainMenu.xib */; };
+		46C057C11A8810FF003725B4 /* Cocoa_Bluetooth_RFCOMM_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C057C01A8810FF003725B4 /* Cocoa_Bluetooth_RFCOMM_SwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46C057BB1A8810FF003725B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46C057A21A8810FF003725B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46C057A91A8810FF003725B4;
+			remoteInfo = "Cocoa Bluetooth RFCOMM Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		46C057AA1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocoa Bluetooth RFCOMM Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C057AE1A8810FF003725B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46C057AF1A8810FF003725B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46C057B11A8810FF003725B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		46C057B41A8810FF003725B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		46C057BA1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cocoa Bluetooth RFCOMM SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C057BF1A8810FF003725B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46C057C01A8810FF003725B4 /* Cocoa_Bluetooth_RFCOMM_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocoa_Bluetooth_RFCOMM_SwiftTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46C057A71A8810FF003725B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46C057B71A8810FF003725B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46C057A11A8810FF003725B4 = {
+			isa = PBXGroup;
+			children = (
+				46C057AC1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift */,
+				46C057BD1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM SwiftTests */,
+				46C057AB1A8810FF003725B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46C057AB1A8810FF003725B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46C057AA1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift.app */,
+				46C057BA1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46C057AC1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift */ = {
+			isa = PBXGroup;
+			children = (
+				46C057AF1A8810FF003725B4 /* AppDelegate.swift */,
+				46C057B11A8810FF003725B4 /* Images.xcassets */,
+				46C057B31A8810FF003725B4 /* MainMenu.xib */,
+				46C057AD1A8810FF003725B4 /* Supporting Files */,
+			);
+			path = "Cocoa Bluetooth RFCOMM Swift";
+			sourceTree = "<group>";
+		};
+		46C057AD1A8810FF003725B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46C057AE1A8810FF003725B4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46C057BD1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				46C057C01A8810FF003725B4 /* Cocoa_Bluetooth_RFCOMM_SwiftTests.swift */,
+				46C057BE1A8810FF003725B4 /* Supporting Files */,
+			);
+			path = "Cocoa Bluetooth RFCOMM SwiftTests";
+			sourceTree = "<group>";
+		};
+		46C057BE1A8810FF003725B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46C057BF1A8810FF003725B4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46C057A91A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46C057C41A8810FF003725B4 /* Build configuration list for PBXNativeTarget "Cocoa Bluetooth RFCOMM Swift" */;
+			buildPhases = (
+				46C057A61A8810FF003725B4 /* Sources */,
+				46C057A71A8810FF003725B4 /* Frameworks */,
+				46C057A81A8810FF003725B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cocoa Bluetooth RFCOMM Swift";
+			productName = "Cocoa Bluetooth RFCOMM Swift";
+			productReference = 46C057AA1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46C057B91A8810FF003725B4 /* Cocoa Bluetooth RFCOMM SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46C057C71A8810FF003725B4 /* Build configuration list for PBXNativeTarget "Cocoa Bluetooth RFCOMM SwiftTests" */;
+			buildPhases = (
+				46C057B61A8810FF003725B4 /* Sources */,
+				46C057B71A8810FF003725B4 /* Frameworks */,
+				46C057B81A8810FF003725B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46C057BC1A8810FF003725B4 /* PBXTargetDependency */,
+			);
+			name = "Cocoa Bluetooth RFCOMM SwiftTests";
+			productName = "Cocoa Bluetooth RFCOMM SwiftTests";
+			productReference = 46C057BA1A8810FF003725B4 /* Cocoa Bluetooth RFCOMM SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46C057A21A8810FF003725B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Garvin Casimir";
+				TargetAttributes = {
+					46C057A91A8810FF003725B4 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					46C057B91A8810FF003725B4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 46C057A91A8810FF003725B4;
+					};
+				};
+			};
+			buildConfigurationList = 46C057A51A8810FF003725B4 /* Build configuration list for PBXProject "Cocoa Bluetooth RFCOMM Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46C057A11A8810FF003725B4;
+			productRefGroup = 46C057AB1A8810FF003725B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46C057A91A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift */,
+				46C057B91A8810FF003725B4 /* Cocoa Bluetooth RFCOMM SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46C057A81A8810FF003725B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C057B21A8810FF003725B4 /* Images.xcassets in Resources */,
+				46C057B51A8810FF003725B4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46C057B81A8810FF003725B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46C057A61A8810FF003725B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C057B01A8810FF003725B4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46C057B61A8810FF003725B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C057C11A8810FF003725B4 /* Cocoa_Bluetooth_RFCOMM_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46C057BC1A8810FF003725B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46C057A91A8810FF003725B4 /* Cocoa Bluetooth RFCOMM Swift */;
+			targetProxy = 46C057BB1A8810FF003725B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46C057B31A8810FF003725B4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46C057B41A8810FF003725B4 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46C057C21A8810FF003725B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46C057C31A8810FF003725B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		46C057C51A8810FF003725B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Cocoa Bluetooth RFCOMM Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46C057C61A8810FF003725B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Cocoa Bluetooth RFCOMM Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		46C057C81A8810FF003725B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Cocoa Bluetooth RFCOMM SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cocoa Bluetooth RFCOMM Swift.app/Contents/MacOS/Cocoa Bluetooth RFCOMM Swift";
+			};
+			name = Debug;
+		};
+		46C057C91A8810FF003725B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Cocoa Bluetooth RFCOMM SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cocoa Bluetooth RFCOMM Swift.app/Contents/MacOS/Cocoa Bluetooth RFCOMM Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46C057A51A8810FF003725B4 /* Build configuration list for PBXProject "Cocoa Bluetooth RFCOMM Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46C057C21A8810FF003725B4 /* Debug */,
+				46C057C31A8810FF003725B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46C057C41A8810FF003725B4 /* Build configuration list for PBXNativeTarget "Cocoa Bluetooth RFCOMM Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46C057C51A8810FF003725B4 /* Debug */,
+				46C057C61A8810FF003725B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46C057C71A8810FF003725B4 /* Build configuration list for PBXNativeTarget "Cocoa Bluetooth RFCOMM SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46C057C81A8810FF003725B4 /* Debug */,
+				46C057C91A8810FF003725B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46C057A21A8810FF003725B4 /* Project object */;
+}
