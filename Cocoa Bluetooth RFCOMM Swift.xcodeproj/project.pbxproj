@@ -393,6 +393,7 @@
 				46C057C61A8810FF003725B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46C057C71A8810FF003725B4 /* Build configuration list for PBXNativeTarget "Cocoa Bluetooth RFCOMM SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +402,7 @@
 				46C057C91A8810FF003725B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
