@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
     @IBAction func discover(sender:AnyObject){
         
         let deviceSelector = IOBluetoothDeviceSelectorController.deviceSelector()
-        let sppServiceUUID = IOBluetoothSDPUUID(UUID32: kBluetoothSDPUUID16ServiceClassSerialPort.value)
+        let sppServiceUUID = IOBluetoothSDPUUID(UUID32: kBluetoothSDPUUID16ServiceClassSerialPort.rawValue)
         
         if ( deviceSelector == nil ) {
             self.log("Error - unable to allocate IOBluetoothDeviceSelectorController.\n" )
@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
             return;
         }
         
-        let device: IOBluetoothDevice = deviceArray[0] as IOBluetoothDevice;
+        let device: IOBluetoothDevice = deviceArray[0] as! IOBluetoothDevice;
         
         let sppServiceRecord = device.getServiceRecordForUUID(sppServiceUUID)
         if ( sppServiceRecord == nil ) {
@@ -54,7 +54,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
             return;
         }
         
-        var rfcommChannelID = UnsafeMutablePointer<BluetoothRFCOMMChannelID>()
+        let rfcommChannelID:UnsafeMutablePointer<BluetoothRFCOMMChannelID> = nil;
+        
         if ( sppServiceRecord.getRFCOMMChannelID(rfcommChannelID) != kIOReturnSuccess ) {
             self.log("Error - no spp service in selected device.  ***This should never happen an spp service must have an rfcomm channel id.***\n")
             return;
@@ -99,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
     func sendMessage(message:String){
         let data = message.dataUsingEncoding(NSUTF8StringEncoding)
         let length = data!.length
-        var dataPointer = UnsafeMutablePointer<Void>.alloc(1)
+        let dataPointer = UnsafeMutablePointer<Void>.alloc(1)
         
         data?.getBytes(dataPointer,length: length)
         
@@ -117,12 +118,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
         }
     }
     
-    func rfcommChannelData(rfcommChannel: IOBluetoothRFCOMMChannel!, data dataPointer: UnsafeMutablePointer<Void>, length dataLength: UInt) {
-        var message = String(bytesNoCopy: dataPointer, length: Int(dataLength), encoding: NSUTF8StringEncoding, freeWhenDone: true)
+    func rfcommChannelData(rfcommChannel: IOBluetoothRFCOMMChannel!, data dataPointer: UnsafeMutablePointer<Void>, length dataLength: Int) {
+        let message = String(bytesNoCopy: dataPointer, length: Int(dataLength), encoding: NSUTF8StringEncoding, freeWhenDone: true)
         
         self.log(message);
     }
     
+
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application

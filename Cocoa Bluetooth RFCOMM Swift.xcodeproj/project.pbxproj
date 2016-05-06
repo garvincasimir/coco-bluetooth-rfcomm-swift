@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -150,6 +150,8 @@
 		46C057A21A8810FF003725B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Garvin Casimir";
 				TargetAttributes = {
@@ -163,7 +165,7 @@
 				};
 			};
 			buildConfigurationList = 46C057A51A8810FF003725B4 /* Build configuration list for PBXProject "Cocoa Bluetooth RFCOMM Swift" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
