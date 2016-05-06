@@ -14,7 +14,7 @@ import IOBluetoothUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDelegate {
 
-    var mRFCOMMChannel : AutoreleasingUnsafeMutablePointer<IOBluetoothRFCOMMChannel?>!
+    var mRFCOMMChannel : IOBluetoothRFCOMMChannel? = nil ;
     
     @IBOutlet weak var window: NSWindow!
  
@@ -25,7 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
     @IBAction func discover(sender:AnyObject){
         
         let deviceSelector = IOBluetoothDeviceSelectorController.deviceSelector()
-        let sppServiceUUID = IOBluetoothSDPUUID(UUID32: kBluetoothSDPUUID16ServiceClassSerialPort.rawValue)
+        let sppServiceUUID = IOBluetoothSDPUUID.uuid32(kBluetoothSDPUUID16ServiceClassSerialPort.rawValue)
+       
         
         if ( deviceSelector == nil ) {
             self.log("Error - unable to allocate IOBluetoothDeviceSelectorController.\n" )
@@ -49,25 +50,30 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
         let device: IOBluetoothDevice = deviceArray[0] as! IOBluetoothDevice;
         
         let sppServiceRecord = device.getServiceRecordForUUID(sppServiceUUID)
+        
+        //device.getservi
         if ( sppServiceRecord == nil ) {
             self.log("Error - no spp service in selected device.  ***This should never happen since the selector forces the user to select only devices with spp.***\n")
             return;
         }
         
-        let rfcommChannelID:UnsafeMutablePointer<BluetoothRFCOMMChannelID> = nil;
+        let rfcommChannelID: UnsafeMutablePointer<BluetoothRFCOMMChannelID> = UnsafeMutablePointer.alloc(1)
         
-        if ( sppServiceRecord.getRFCOMMChannelID(rfcommChannelID) != kIOReturnSuccess ) {
+        if (sppServiceRecord.getRFCOMMChannelID(rfcommChannelID) != kIOReturnSuccess ) {
             self.log("Error - no spp service in selected device.  ***This should never happen an spp service must have an rfcomm channel id.***\n")
             return;
         }
+  
         
-        if ( device.openRFCOMMChannelAsync(mRFCOMMChannel, withChannelID: rfcommChannelID.memory, delegate: self) != kIOReturnSuccess    ) {
+        if ( device.openRFCOMMChannelAsync(&mRFCOMMChannel, withChannelID: rfcommChannelID.memory, delegate: self) != kIOReturnSuccess    ) {
             // Something went bad (looking at the error codes I can also say what, but for the moment let's not dwell on
             // those details). If the device connection is left open close it and return an error:
             self.log("Error - open sequence failed.***\n")
            
             return;
         }
+        
+        
 
 
         
@@ -105,7 +111,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
         data?.getBytes(dataPointer,length: length)
         
         self.log("Sending Message\n")
-        mRFCOMMChannel.memory?.writeSync(dataPointer, length: UInt16(length))
+        mRFCOMMChannel?.writeSync(dataPointer, length: UInt16(length))
     }
     
 
@@ -119,7 +125,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
     }
     
     func rfcommChannelData(rfcommChannel: IOBluetoothRFCOMMChannel!, data dataPointer: UnsafeMutablePointer<Void>, length dataLength: Int) {
-        let message = String(bytesNoCopy: dataPointer, length: Int(dataLength), encoding: NSUTF8StringEncoding, freeWhenDone: true)
+        let message = String(bytesNoCopy: dataPointer, length: Int(dataLength), encoding: NSUTF8StringEncoding, freeWhenDone: false)
         
         self.log(message);
     }
