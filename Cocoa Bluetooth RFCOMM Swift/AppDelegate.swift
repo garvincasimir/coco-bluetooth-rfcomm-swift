@@ -14,7 +14,7 @@ import IOBluetoothUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDelegate {
 
-    var mRFCOMMChannel : IOBluetoothRFCOMMChannel? = nil ;
+    var mRFCOMMChannel : IOBluetoothRFCOMMChannel? ;
     
     @IBOutlet weak var window: NSWindow!
  
@@ -57,15 +57,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
             return;
         }
         
-        let rfcommChannelID: UnsafeMutablePointer<BluetoothRFCOMMChannelID> = UnsafeMutablePointer.alloc(1)
+        var rfcommChannelID: BluetoothRFCOMMChannelID = 0;
         
-        if (sppServiceRecord.getRFCOMMChannelID(rfcommChannelID) != kIOReturnSuccess ) {
+        if (sppServiceRecord.getRFCOMMChannelID(&rfcommChannelID) != kIOReturnSuccess ) {
             self.log("Error - no spp service in selected device.  ***This should never happen an spp service must have an rfcomm channel id.***\n")
             return;
         }
   
         
-        if ( device.openRFCOMMChannelAsync(&mRFCOMMChannel, withChannelID: rfcommChannelID.memory, delegate: self) != kIOReturnSuccess    ) {
+        if ( device.openRFCOMMChannelAsync(&mRFCOMMChannel, withChannelID: rfcommChannelID, delegate: self) != kIOReturnSuccess    ) {
             // Something went bad (looking at the error codes I can also say what, but for the moment let's not dwell on
             // those details). If the device connection is left open close it and return an error:
             self.log("Error - open sequence failed.***\n")
@@ -103,6 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, IOBluetoothRFCOMMChannelDele
         self.sendMessage(myString)
     }
     
+    //This is not safe,,,
     func sendMessage(message:String){
         let data = message.dataUsingEncoding(NSUTF8StringEncoding)
         let length = data!.length
